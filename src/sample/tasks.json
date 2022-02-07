@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Read",
+        "description": "Read one page The Sandman Comic",
+        "done": false
+    },
+    {
+        "id": 1,
+        "name": "Study",
+        "description": "Study js topics",
+        "done": false
+    },
+    {
+        "id": 2,
+        "name": "Anime",
+        "description": "Watch anime",
+        "done": false
+    }
+]
