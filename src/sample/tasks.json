@@ -2,14 +2,14 @@
     {
         "id": 0,
         "name": "Read",
-        "description": "Read one page The Sandman Comic",
+        "description": "Read Sandman Comic",
         "done": false
     },
     {
         "id": 1,
         "name": "Study",
         "description": "Study js topics",
-        "done": false
+        "done": true
     },
     {
         "id": 2,

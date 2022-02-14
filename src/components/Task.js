@@ -3,10 +3,19 @@ import React, { Component } from "react";
 import "./Task.css";
 
 class Task extends Component {
+
+    StyleCompleted() {
+        return {
+            fontSize: '20px',
+            color: this.props.task.done ? 'gray' : 'black',
+            textDecoration: this.props.task.done ? 'line-through' : 'none'
+        }
+    }
+
     render() {
         const {task} = this.props;
         // const redColor = { background: 'red'};
-        return <p 
+        return <p style={this.StyleCompleted()}
         /*style={redColor}*/
         /*className="back"*/ 
         /*style={{ background: 'red' }}*/>
