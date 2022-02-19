@@ -6,6 +6,7 @@ export default class TaskForm extends Component {
         description: ""
     };
     OnSubmit = e => {
+        this.props.addTask(this.state.task, this.state.description);
         e.preventDefault();
     }
     OnChange = e => {
@@ -30,7 +31,7 @@ export default class TaskForm extends Component {
                     value={this.state.description} >
                 </textarea>
                 <br /><br />
-                <input type="submit" value="Enter" />
+                <input type="submit" value="Save Task" />
             </form>
         )
     }
