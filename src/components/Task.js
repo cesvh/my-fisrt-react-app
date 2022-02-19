@@ -8,8 +8,8 @@ class Task extends Component {
     StyleCompleted() {
         return {
             fontSize: '20px',
-            color: this.props.task.done ? 'gray' : 'black',
-            textDecoration: this.props.task.done ? 'line-through' : 'none'
+            color: this.props.task.done ? 'black' : 'gray',
+            textDecoration: this.props.task.done ? 'none' : 'line-through'
         }
     }
 
@@ -22,8 +22,8 @@ class Task extends Component {
         /*style={{ background: 'red' }}*/>
             { task.name } - 
             { task.description }
-            <input type="checkbox" />
-            <button style={btnDelete}>
+            <input type="checkbox" onChange={this.props.updateDone.bind(this, task.id)}/>
+            <button style={btnDelete} onClick={this.props.deleteTask.bind(this, task.id)} >
                 x
             </button>
         </p>

@@ -3,7 +3,7 @@
         "id": 0,
         "name": "Read",
         "description": "Read Sandman Comic",
-        "done": false
+        "done": true
     },
     {
         "id": 1,
@@ -15,6 +15,6 @@
         "id": 2,
         "name": "Anime",
         "description": "Watch anime",
-        "done": false
+        "done": true
     }
 ]

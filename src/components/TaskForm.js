@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 export default class TaskForm extends Component {
     state = {
-        task: "",
+        name: "",
         description: ""
     };
     OnSubmit = e => {
-        this.props.addTask(this.state.task, this.state.description);
+        this.props.addTask(this.state.name, this.state.description);
         e.preventDefault();
     }
     OnChange = e => {
@@ -19,7 +19,7 @@ export default class TaskForm extends Component {
             <form onSubmit={this.OnSubmit}>
                 <input 
                     type="text" 
-                    name="task"
+                    name="name"
                     placeholder="Enter a task" 
                     onChange={this.OnChange} 
                     value={this.state.task} />

@@ -12,21 +12,47 @@ class App extends Component {
     tasks: tasks
   }
 
-  addTask = (task, description) => {
+  addTask = (name, description) => {
     const newTask = {
-      task: task,
+      name: name,
       description: description,
-      id: this.state.tasks.length
+      id: this.state.tasks.length,
+      done: true
     }
     this.setState({
       tasks: [...this.state.tasks, newTask]
     });
   }
 
+  deleteTask = (id) => {
+    const newTasks = this.state.tasks.filter(task => task.id !== id);
+    this.setState({
+      tasks: newTasks
+    });
+  }
+
+  updateDone = (id) => {
+    const newTasks = this.state.tasks.map(task => {
+      if(task.id === id) {
+        task.done = !task.done
+      }
+      return task;
+    });
+    this.setState({
+      tasks: newTasks
+    })
+  }
+
   render () {
     return <div>
-      <TaskForm  addTask={this.addTask}/>
-      <Tasks tasks={this.state.tasks} />
+      <TaskForm 
+        addTask={this.addTask}
+        />
+      <Tasks 
+        tasks={this.state.tasks} 
+        deleteTask={this.deleteTask}
+        updateDone={this.updateDone}
+        />
     </div>
   }
 }
